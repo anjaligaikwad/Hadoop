@@ -1,0 +1,31 @@
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+
+public class combinerExample {
+	
+	
+		public static class myMapper extends Mapper<LongWritable, Text, Text, Text>{
+				
+			public void map(LongWritable inpKey, Text inpVal, Context c){
+				
+			}
+		}
+		
+		public static class myCombiner extends Reducer<Text, Text, Text, Text>{
+			
+		}
+		
+		
+		public static class myReducer extends Reducer<Text, Text, Text, Text>{
+			
+		}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

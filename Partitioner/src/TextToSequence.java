@@ -1,0 +1,15 @@
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+
+public class TextToSequence {
+
+	 public static class SequenceMapper extends Mapper<LongWritable,Text,LongWritable,Text>{
+		 String record = value.toString();
+		 String[] parts = record.split(",");
+		 int mykey = Integer.parseInt(parts[0]);
+		 context.write(new LongWritable(mykey),new Text(parts[1]));
+	 }
+	 
+}
